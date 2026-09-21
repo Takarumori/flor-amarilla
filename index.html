@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Feliz 21 de Septiembre</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Girasoles aleatorios -->
+    <div id="girasoles"></div>
+
+    <!-- Contenido principal -->
+    <main class="contenedor">
+
+        <div class="icono-flor">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <div class="centro"></div>
+        </div>
+
+        <h1>Feliz 21 de Septiembre</h1>
+
+        <p>
+            Un día para regalar flores amarillas
+        </p>
+
+        <div class="flor-principal">
+
+            <div class="petalos">
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+            </div>
+
+            <div class="centro-flor"></div>
+
+            <div class="tallo"></div>
+
+            <div class="hoja hoja-izq"></div>
+            <div class="hoja hoja-der"></div>
+
+        </div>
+
+    </main>
+
+
+    <!-- JavaScript -->
+
+    <script>
+
+        const contenedor =
+            document.getElementById("girasoles");
+
+        // Cantidad de girasoles
+        const cantidad = 18;
+
+        for (let i = 0; i < cantidad; i++) {
+
+            const girasol =
+                document.createElement("div");
+
+            girasol.classList.add("girasol-random");
+
+
+            // Posición aleatoria
+
+            const izquierda =
+                Math.random() * 100;
+
+            const arriba =
+                Math.random() * 100;
+
+
+            // Tamaño aleatorio
+
+            const tamaño =
+                0.35 + Math.random() * 0.75;
+
+
+            // Rotación aleatoria
+
+            const rotacion =
+                Math.random() * 360;
+
+
+            girasol.style.left =
+                izquierda + "%";
+
+            girasol.style.top =
+                arriba + "%";
+
+            girasol.style.transform =
+                `scale(${tamaño}) rotate(${rotacion}deg)`;
+
+
+            // Crear pétalos
+
+            for (let j = 0; j < 8; j++) {
+
+                const petalo =
+                    document.createElement("span");
+
+                petalo.classList.add("petalo-random");
+
+                petalo.style.transform =
+                    `rotate(${j * 45}deg)`;
+
+                girasol.appendChild(petalo);
+            }
+
+
+            // Centro
+
+            const centro =
+                document.createElement("div");
+
+            centro.classList.add(
+                "centro-random"
+            );
+
+            girasol.appendChild(centro);
+
+
+            // Agregar a la pantalla
+
+            contenedor.appendChild(girasol);
+        }
+
+    </script>
+
+</body>
+
+</html>

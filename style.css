@@ -1,0 +1,401 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+
+    position: relative;
+
+    font-family: Arial, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #fffde7,
+            #ffe082
+        );
+}
+
+
+/* =================================
+   GIRASOLES ALEATORIOS
+================================= */
+
+#girasoles {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    left: 0;
+    top: 0;
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+
+/* GIRASOL */
+
+.girasol-random {
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+
+    transform-origin: center;
+
+    opacity: 0.75;
+
+    animation:
+        flotar-random 5s ease-in-out infinite;
+}
+
+
+/* PÉTALOS */
+
+.petalo-random {
+    position: absolute;
+
+    width: 32px;
+    height: 55px;
+
+    left: 34px;
+    top: 0;
+
+    background: #fbc02d;
+
+    border-radius: 50%;
+
+    transform-origin: 16px 50px;
+}
+
+
+/* CENTRO */
+
+.centro-random {
+    position: absolute;
+
+    width: 42px;
+    height: 42px;
+
+    left: 29px;
+    top: 29px;
+
+    background: #795548;
+
+    border-radius: 50%;
+
+    border: 5px solid #5d4037;
+
+    z-index: 5;
+}
+
+
+/* ANIMACIÓN */
+
+@keyframes flotar-random {
+
+    0%,
+    100% {
+        margin-top: 0;
+    }
+
+    50% {
+        margin-top: -12px;
+    }
+}
+
+
+/* =================================
+   CONTENIDO PRINCIPAL
+================================= */
+
+.contenedor {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    z-index: 10;
+}
+
+
+/* =================================
+   ICONO SUPERIOR
+================================= */
+
+.icono-flor {
+    position: relative;
+
+    width: 90px;
+    height: 90px;
+
+    margin-bottom: 20px;
+}
+
+
+.icono-flor span {
+    position: absolute;
+
+    width: 35px;
+    height: 50px;
+
+    left: 27px;
+    top: 0;
+
+    background: #fbc02d;
+
+    border-radius: 50%;
+
+    transform-origin: 18px 45px;
+}
+
+
+.icono-flor span:nth-child(1) {
+    transform: rotate(0deg);
+}
+
+.icono-flor span:nth-child(2) {
+    transform: rotate(60deg);
+}
+
+.icono-flor span:nth-child(3) {
+    transform: rotate(120deg);
+}
+
+.icono-flor span:nth-child(4) {
+    transform: rotate(180deg);
+}
+
+.icono-flor span:nth-child(5) {
+    transform: rotate(240deg);
+}
+
+.icono-flor span:nth-child(6) {
+    transform: rotate(300deg);
+}
+
+
+.icono-flor .centro {
+    position: absolute;
+
+    width: 35px;
+    height: 35px;
+
+    left: 27px;
+    top: 27px;
+
+    background: #795548;
+
+    border-radius: 50%;
+
+    border: 5px solid #5d4037;
+
+    z-index: 2;
+}
+
+
+/* =================================
+   TITULO
+================================= */
+
+h1 {
+    font-size: 58px;
+
+    color: #b77900;
+
+    text-shadow:
+        2px 3px 5px rgba(0, 0, 0, 0.15);
+
+    margin-bottom: 15px;
+}
+
+
+p {
+    font-size: 24px;
+
+    color: #765500;
+
+    margin-bottom: 30px;
+}
+
+
+/* =================================
+   FLOR PRINCIPAL
+================================= */
+
+.flor-principal {
+    position: relative;
+
+    width: 150px;
+    height: 250px;
+}
+
+
+/* PÉTALOS */
+
+.petalos {
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+}
+
+
+.petalos i {
+    position: absolute;
+
+    width: 48px;
+    height: 80px;
+
+    left: 51px;
+    top: -5px;
+
+    background: #ffd21c;
+
+    border-radius: 50%;
+
+    transform-origin: 24px 68px;
+}
+
+
+.petalos i:nth-child(1) {
+    transform: rotate(0deg);
+}
+
+.petalos i:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.petalos i:nth-child(3) {
+    transform: rotate(90deg);
+}
+
+.petalos i:nth-child(4) {
+    transform: rotate(135deg);
+}
+
+.petalos i:nth-child(5) {
+    transform: rotate(180deg);
+}
+
+.petalos i:nth-child(6) {
+    transform: rotate(225deg);
+}
+
+.petalos i:nth-child(7) {
+    transform: rotate(270deg);
+}
+
+.petalos i:nth-child(8) {
+    transform: rotate(315deg);
+}
+
+
+/* CENTRO */
+
+.centro-flor {
+    position: absolute;
+
+    width: 62px;
+    height: 62px;
+
+    left: 44px;
+    top: 40px;
+
+    background: #795548;
+
+    border-radius: 50%;
+
+    border: 7px solid #5d4037;
+
+    z-index: 5;
+}
+
+
+/* TALLO */
+
+.tallo {
+    position: absolute;
+
+    width: 13px;
+    height: 175px;
+
+    left: 68px;
+    top: 85px;
+
+    background: #438a35;
+
+    border-radius: 20px;
+}
+
+
+/* HOJAS */
+
+.hoja {
+    position: absolute;
+
+    width: 75px;
+    height: 35px;
+
+    background: #58a942;
+
+    border-radius: 100% 0 100% 0;
+}
+
+
+.hoja-izq {
+    left: 0;
+    top: 155px;
+
+    transform: rotate(-25deg);
+}
+
+
+.hoja-der {
+    right: 0;
+    top: 190px;
+
+    transform:
+        rotate(25deg)
+        scaleX(-1);
+}
+
+
+/* =================================
+   CELULAR
+================================= */
+
+@media (max-width: 700px) {
+
+    h1 {
+        font-size: 38px;
+    }
+
+    p {
+        font-size: 19px;
+    }
+
+    .girasol-random {
+        opacity: 0.5;
+    }
+
+}
