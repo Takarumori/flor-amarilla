@@ -12,10 +12,8 @@
 
 <body>
 
-    <!-- Girasoles aleatorios -->
     <div id="girasoles"></div>
 
-    <!-- Contenido principal -->
     <main class="contenedor">
 
         <div class="icono-flor">
@@ -60,14 +58,12 @@
     </main>
 
 
-    <!-- JavaScript -->
-
     <script>
 
         const contenedor =
             document.getElementById("girasoles");
 
-        // Cantidad de girasoles
+
         const cantidad = 18;
 
         for (let i = 0; i < cantidad; i++) {
@@ -78,7 +74,6 @@
             girasol.classList.add("girasol-random");
 
 
-            // Posición aleatoria
 
             const izquierda =
                 Math.random() * 100;
@@ -87,13 +82,11 @@
                 Math.random() * 100;
 
 
-            // Tamaño aleatorio
 
             const tamaño =
                 0.35 + Math.random() * 0.75;
 
 
-            // Rotación aleatoria
 
             const rotacion =
                 Math.random() * 360;
@@ -109,7 +102,6 @@
                 `scale(${tamaño}) rotate(${rotacion}deg)`;
 
 
-            // Crear pétalos
 
             for (let j = 0; j < 8; j++) {
 
@@ -125,7 +117,6 @@
             }
 
 
-            // Centro
 
             const centro =
                 document.createElement("div");
@@ -137,7 +128,6 @@
             girasol.appendChild(centro);
 
 
-            // Agregar a la pantalla
 
             contenedor.appendChild(girasol);
         }

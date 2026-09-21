@@ -23,10 +23,6 @@ body {
 }
 
 
-/* =================================
-   GIRASOLES ALEATORIOS
-================================= */
-
 #girasoles {
     position: absolute;
 
@@ -114,9 +110,6 @@ body {
 }
 
 
-/* =================================
-   CONTENIDO PRINCIPAL
-================================= */
 
 .contenedor {
     position: relative;
@@ -138,9 +131,6 @@ body {
 }
 
 
-/* =================================
-   ICONO SUPERIOR
-================================= */
 
 .icono-flor {
     position: relative;
@@ -213,9 +203,6 @@ body {
 }
 
 
-/* =================================
-   TITULO
-================================= */
 
 h1 {
     font-size: 58px;
@@ -238,9 +225,6 @@ p {
 }
 
 
-/* =================================
-   FLOR PRINCIPAL
-================================= */
 
 .flor-principal {
     position: relative;
@@ -310,7 +294,6 @@ p {
 }
 
 
-/* CENTRO */
 
 .centro-flor {
     position: absolute;
@@ -331,7 +314,6 @@ p {
 }
 
 
-/* TALLO */
 
 .tallo {
     position: absolute;
@@ -348,7 +330,6 @@ p {
 }
 
 
-/* HOJAS */
 
 .hoja {
     position: absolute;
@@ -379,10 +360,6 @@ p {
         scaleX(-1);
 }
 
-
-/* =================================
-   CELULAR
-================================= */
 
 @media (max-width: 700px) {
 
