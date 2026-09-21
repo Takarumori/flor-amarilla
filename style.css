@@ -376,3 +376,24 @@ p {
     }
 
 }
+.firma { 
+    position: fixed; 
+    bottom: 25px; 
+    left: 0; 
+    width: 100%; 
+    text-align: center; 
+    z-index: 20; 
+    font-family: Arial, sans-serif; 
+} 
+.firma strong { 
+    display: block; 
+    font-size: 21px; 
+    color: #765500; 
+    margin-bottom: 5px; 
+} 
+.firma span { 
+    display: block; 
+    font-size: 15px; 
+    color: #9a7b20; 
+    letter-spacing: 0.5px; 
+}
